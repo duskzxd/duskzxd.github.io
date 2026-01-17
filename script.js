@@ -2,11 +2,10 @@ const announcement = document.getElementById("announcement");
 const closeBtn = document.getElementById("closeAnnouncement");
 
 if (!localStorage.getItem("announcementClosed")) {
-  announcement.classList.remove("hidden");
+  announcement.style.display = "flex";
 }
 
-closeBtn.onclick = () => {
-  announcement.classList.add("hidden");
+closeBtn.addEventListener("click", () => {
+  announcement.style.display = "none";
   localStorage.setItem("announcementClosed", "true");
-};
-
+});
