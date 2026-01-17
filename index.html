@@ -13,30 +13,34 @@
 <body>
 
   <!-- Animated Background -->
-  <div class="background"></div>
+  <div class="orbs">
+    <span></span><span></span><span></span><span></span>
+  </div>
 
-  <!-- Announcement -->
+  <!-- Announcement (Top / Sticky) -->
   <div id="announcement" class="announcement hidden">
     <div class="announcement-card">
       <span class="badge">IMPORTANT</span>
-      <p>New updates coming soon 👀</p>
+      <p>Major updates are coming soon.</p>
       <button id="closeAnnouncement">✕</button>
     </div>
   </div>
 
-  <!-- Main Content -->
   <main class="container">
+
+    <!-- Hero -->
     <section class="hero fade-in">
       <h1>duskzxd</h1>
       <p>Developer · Creator · Internet Personality</p>
     </section>
 
+    <!-- Main Cards -->
     <section class="cards">
       <div class="card slide-up">
         <h3>About Me</h3>
         <p>
-          I'm duskzxd. This is my personal website where you can find everything
-          about me, my projects and my online presence.
+          I'm duskzxd. This website contains everything about me, my projects
+          and my online presence.
         </p>
       </div>
 
@@ -44,17 +48,86 @@
         <h3>Social Media</h3>
         <p>
           You can find me as <strong>@duskzxd</strong> on most platforms.
-          More links coming soon.
         </p>
       </div>
 
       <div class="card slide-up delay-2">
         <h3>Projects</h3>
         <p>
-          A collection of my public and private projects – clean, modern and evolving.
+          A collection of public and private projects – clean, modern and evolving.
         </p>
       </div>
     </section>
+
+    <!-- Announcement Card (Again) -->
+    <section class="cards">
+      <div class="card announcement-inline">
+        <h3>Announcement</h3>
+        <p>
+          Major updates are coming soon. Stay tuned for new content,
+          projects and social links.
+        </p>
+      </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="section">
+      <h2>Links</h2>
+      <div class="socials">
+        <a href="soon" class="social">Discord</a>
+        <a href="https://github.com/duskzxd" class="social">GitHub</a>
+        <a href="https://www.youtube.com/@duskzxd" class="social">YouTube</a>
+        <a href="https://www.roblox.com/users/10258872823/profile" class="social">Roblox</a>
+      </div>
+    </section>
+
+    <!-- Profiles -->
+    <section class="profiles">
+
+      <!-- Discord Profile -->
+<div class="profile-card">
+  <h3>Discord</h3>
+  <div class="profile discord-profile">
+    <img class="avatar" src="https://cdn.discordapp.com/avatars/1456060220307542243/b0263e20e798a7e9f843773ebd3b1c93.webp" alt="Discord Avatar">
+
+    <div class="profile-info">
+      <div class="name-row">
+        <strong>@duskzxd.</strong>
+
+        <!-- Discord Badges (Images) -->
+        <div class="discord-badges">
+          <img src="https://cdn3.emoji.gg/emojis/513595-verified.png" alt="Verified">
+          <img src="https://cdn3.emoji.gg/emojis/517009-earlyverifiedbotdevelopercyan.png" alt="Developer">
+          <img src="https://cdn3.emoji.gg/emojis/3552-early.png" alt="Early User">
+        </div>
+      </div>
+
+      <span class="status online">Online</span>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Roblox Profile -->
+      <div class="profile-card">
+        <h3>Roblox</h3>
+        <div class="profile">
+          <img src="https://tr.rbxcdn.com/30DAY-Avatar.png" alt="Roblox Avatar">
+          <div>
+            <strong>duskzxd</strong>
+            <p>Roblox Content Creator</p>
+            <span class="status">Active</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      © 2026 duskzxd · All rights reserved
+    </footer>
+
   </main>
 
   <script src="script.js"></script>
