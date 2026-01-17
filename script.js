@@ -1,7 +1,7 @@
 const announcement = document.getElementById("announcement");
 const closeBtn = document.getElementById("closeAnnouncement");
 
-// Toggle announcement visibility
+// Toggle announcement
 const SHOW_ANNOUNCEMENT = true;
 
 if (SHOW_ANNOUNCEMENT && !localStorage.getItem("announcementClosed")) {
