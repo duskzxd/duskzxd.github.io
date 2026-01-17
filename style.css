@@ -8,76 +8,21 @@
 body {
   background: #0b0b0b;
   color: #fff;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* Animated Orbs Background */
-.orbs {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  z-index: -1;
 }
 
 .orbs span {
-  position: absolute;
+  position: fixed;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, #222, transparent 70%);
-  animation: float 20s infinite alternate ease-in-out;
+  background: radial-gradient(circle,#222,transparent 70%);
+  animation: float 20s infinite alternate;
 }
-
-.orbs span:nth-child(1) { top: 10%; left: 10%; }
-.orbs span:nth-child(2) { top: 60%; left: 20%; animation-duration: 25s; }
-.orbs span:nth-child(3) { top: 30%; left: 70%; animation-duration: 30s; }
-.orbs span:nth-child(4) { top: 70%; left: 60%; animation-duration: 22s; }
 
 @keyframes float {
-  from { transform: translateY(0) scale(1); }
-  to { transform: translateY(-80px) scale(1.2); }
+  from { transform: translateY(0); }
+  to { transform: translateY(-80px); }
 }
 
-/* Announcement */
-.announcement {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  z-index: 100;
-}
-
-.hidden { display: none; }
-
-.announcement-card {
-  background: rgba(15,15,15,0.9);
-  border: 1px solid #333;
-  border-radius: 14px;
-  padding: 0.8rem 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  backdrop-filter: blur(10px);
-}
-
-.badge {
-  background: #fff;
-  color: #000;
-  font-size: 0.7rem;
-  padding: 4px 8px;
-  border-radius: 999px;
-  font-weight: 700;
-}
-
-#closeAnnouncement {
-  background: none;
-  border: none;
-  color: #aaa;
-  cursor: pointer;
-}
-
-/* Layout */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -89,38 +34,8 @@ body {
   margin-bottom: 4rem;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-}
-
-.hero p {
-  color: #aaa;
-}
-
-/* Cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
-.card {
-  background: rgba(20,20,20,0.75);
-  border: 1px solid #333;
-  border-radius: 18px;
-  padding: 2rem;
-  backdrop-filter: blur(12px);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-/* Sections */
 .section h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .socials {
@@ -130,29 +45,25 @@ body {
 }
 
 .social {
-  padding: 0.7rem 1.2rem;
-  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem 1rem;
   border: 1px solid #333;
+  border-radius: 999px;
   text-decoration: none;
   color: #fff;
-  transition: background 0.3s;
 }
 
-.social:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* Profiles */
 .profiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
   gap: 2rem;
-  margin: 4rem 0;
+  margin-top: 4rem;
 }
 
 .profile-card {
-  background: rgba(20,20,20,0.7);
+  background: rgba(20,20,20,.8);
   border: 1px solid #333;
   border-radius: 18px;
   padding: 1.5rem;
@@ -160,19 +71,38 @@ body {
 
 .profile {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
 }
 
-.profile img {
+.avatar {
   width: 64px;
   height: 64px;
   border-radius: 50%;
 }
 
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.username {
+  font-weight: 700;
+}
+
+.badges img {
+  width: 18px;
+  height: 18px;
+}
+
 .status {
-  display: block;
-  font-size: 0.8rem;
+  font-size: .8rem;
   color: #aaa;
 }
 
@@ -180,53 +110,14 @@ body {
   color: #4caf50;
 }
 
-.badges span {
-  display: inline-block;
-  font-size: 0.6rem;
-  border: 1px solid #555;
-  padding: 3px 6px;
-  border-radius: 6px;
-  margin-right: 4px;
+.subtitle {
+  font-size: .85rem;
+  color: #aaa;
 }
 
-/* Footer */
 footer {
   text-align: center;
-  color: #555;
   margin-top: 4rem;
-  font-size: 0.8rem;
-}
-
-/* Animations */
-.fade-in {
-  animation: fade 1s ease forwards;
-}
-
-@keyframes fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.slide-up {
-  opacity: 0;
-  animation: slideUp 0.8s ease forwards;
-}
-
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-
-@keyframes slideUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.social {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.social img {
-  width: 18px;
-  height: 18px;
+  font-size: .8rem;
+  color: #555;
 }
