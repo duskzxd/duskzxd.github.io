@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duskz | Roblox Shop</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0e0f14;
+    color: #ffffff;
+}
+
+header {
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #5865f2, #404eed);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4em;
+}
+
+header p {
+    margin-top: 8px;
+    opacity: 0.85;
+}
+
+.shop {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.item {
+    background: #1a1b23;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+}
+
+.item img.preview {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background: #000;
+}
+
+.item-content {
+    padding: 20px;
+}
+
+.item-content a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.item-content a:hover {
+    text-decoration: underline;
+}
+
+.item-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.25em;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #00ff9c;
+}
+
+.price img {
+    width: 22px;
+    height: 22px;
+}
+
+.placeholder {
+    opacity: 0.55;
+}
+
+.placeholder .price {
+    color: #ffcc00;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.6;
+    font-size: 0.9em;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🛒 Duskz Roblox Shop</h1>
+    <p>Classic shirts & upcoming drops – official Roblox catalog</p>
+</header>
+
+<section class="shop">
+
+    <!-- ITEM 1 -->
+    <div class="item">
+        <img class="preview" src="https://tr.rbxcdn.com/180DAY-ed74d03912620eb5ae23d504ef1545dd/420/420/Shirt/Webp/noFilter" alt="Roblox Shirt Preview">
+        <div class="item-content">
+            <a href="https://www.roblox.com/catalog/107137427576050/you-down" target="_blank">
+                <h3>you down</h3>
+            </a>
+            <div class="price">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Robux_2019_Logo_gold.svg" alt="Robux">
+                5
+            </div>
+        </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="item">
+        <img class="preview" src="https://tr.rbxcdn.com/180DAY-a74976277afdf359e161252a5dab8dfd/420/420/Shirt/Webp/noFilter" alt="Roblox Shirt Preview">
+        <div class="item-content">
+            <a href="https://www.roblox.com/catalog/96140047834576/Joy-baiting" target="_blank">
+                <h3>JJoy baiting</h3>
+            </a>
+            <div class="price">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Robux_2019_Logo_gold.svg" alt="Robux">
+                5
+            </div>
+        </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="item">
+        <img class="preview" src="https://tr.rbxcdn.com/180DAY-e95242b9b222c1a4ee9dc85ea2b25f69/420/420/Shirt/Webp/noFilter" alt="Roblox Shirt Preview">
+        <div class="item-content">
+            <a href="https://www.roblox.com/catalog/117169876166766/goth-baddies" target="_blank">
+                <h3>Goth baddie's</h3>
+            </a>
+            <div class="price">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Robux_2019_Logo_gold.svg" alt="Robux">
+                5
+            </div>
+        </div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="item">
+        <img class="preview" src="https://tr.rbxcdn.com/180DAY-e1a0a6c06679f0fc9ad2f889532558c2/420/420/Shirt/Webp/noFilter" alt="Roblox Shirt Preview">
+        <div class="item-content">
+            <a href="https://www.roblox.com/catalog/126125255312038/Drachenlord-auf-ewig" target="_blank">
+                <h3>Drachenlord auf ewig</h3>
+            </a>
+            <div class="price">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Robux_2019_Logo_gold.svg" alt="Robux">
+                5
+            </div>
+        </div>
+    </div>
+
+    <!-- PLACEHOLDER 1 -->
+    <div class="item placeholder">
+        <img class="preview" src="https://via.placeholder.com/420x420/111111/777777?text=Coming+Soon" alt="Coming Soon">
+        <div class="item-content">
+            <h3>Upcoming Drop</h3>
+            <div class="price">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Robux_2019_Logo_gold.svg" alt="Robux">
+                off sale
+            </div>
+        </div>
+    </div>
+
+    <!-- PLACEHOLDER 2 -->
+    <div class="item placeholder">
+        <img class="preview" src="https://via.placeholder.com/420x420/111111/777777?text=Coming+Soon" alt="Coming Soon">
+        <div class="item-content">
+            <h3>Upcoming Drop</h3>
+            <div class="price">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Robux_2019_Logo_gold.svg" alt="Robux">
+                off sale
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Duskz — Not affiliated with Roblox Corporation
+</footer>
+
+</body>
+</html>
