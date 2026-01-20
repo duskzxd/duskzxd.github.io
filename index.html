@@ -11,9 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- 🔥 INLINE ANIMATION STYLE -->
   <style>
-    
     .animate {
       opacity: 0;
       transform: translateX(-40px);
@@ -33,35 +31,44 @@
       animation: none !important;
     }
 
+    /* Discord Avatar + Status */
     .avatar-wrapper {
-  position: relative;
-  width: 64px;
-  height: 64px;
-}
+      position: relative;
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+    }
 
-.avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-}
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
 
-/* echtes Status-Bild */
-.status-img {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  bottom: -2px;
-  right: -2px;
-}
+    .status-img {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 18px;
+      height: 18px;
+      background: #0b0b0b;
+      border-radius: 50%;
+      padding: 2.5px;
+      box-sizing: border-box;
+    }
+
+    .status-img img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
   </style>
 </head>
 
 <body>
 
-<!-- Background -->
 <div class="background"></div>
 
-<!-- Announcement Overlay -->
 <div id="announcement" class="announcement">
   <div class="announcement-card">
     <span class="badge">ANNOUNCEMENT</span>
@@ -72,13 +79,11 @@
 
 <main class="container">
 
-  <!-- Hero -->
   <section class="hero">
     <h1>duskzxd</h1>
     <p>Developer · Creator · Internet Personality</p>
   </section>
 
-  <!-- Cards -->
   <section class="cards">
     <div class="card">
       <h3>About Me</h3>
@@ -96,7 +101,6 @@
     </div>
   </section>
 
-  <!-- Inline Announcement -->
   <section class="cards">
     <div class="card wide">
       <h3>Announcement</h3>
@@ -104,7 +108,6 @@
     </div>
   </section>
 
-  <!-- Links -->
   <section class="section">
     <h2>Links</h2>
     <div class="socials">
@@ -116,33 +119,32 @@
     </div>
   </section>
 
-  <!-- Profiles -->
   <section class="profiles">
 
-    <!-- Discord -->
-<div class="profile-card">
-  <h3>Discord</h3>
-  <div class="profile">
+    <!-- Discord (FIXED) -->
+    <div class="profile-card">
+      <h3>Discord</h3>
+      <div class="profile">
 
-    <div class="avatar-wrapper">
-      <img class="avatar" src="https://cdn.discordapp.com/avatars/1456060220307542243/2f941a8cbc9491264af3d883d6fba818.webp">
-      <!-- neues Idle-Bild -->
-      <img class="status-img" src="https://assets.guns.lol/idle.png" alt="Idle">
-    </div>
-
-    <div>
-      <div class="name-row">
-        <strong>@duskzxd.</strong>
-        <div class="badges">
-          <img src="https://cdn3.emoji.gg/emojis/5630-discord-nitro.png">
-          <img src="https://cdn3.emoji.gg/emojis/815305-booster.png">
+        <div class="avatar-wrapper">
+          <img class="avatar" src="https://cdn.discordapp.com/avatars/1456060220307542243/2f941a8cbc9491264af3d883d6fba818.webp">
+          <span class="status-img">
+            <img src="https://assets.guns.lol/idle.png" alt="Idle">
+          </span>
         </div>
+
+        <div>
+          <div class="name-row">
+            <strong>@duskzxd.</strong>
+            <div class="badges">
+              <img src="https://cdn3.emoji.gg/emojis/5630-discord-nitro.png">
+              <img src="https://cdn3.emoji.gg/emojis/815305-booster.png">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-
-  </div>
-</div>
-
 
     <!-- Roblox -->
     <div class="profile-card">
@@ -158,7 +160,6 @@
       </div>
     </div>
 
-    <!-- Roblox Shop -->
     <div class="profile-card">
       <h3>Roblox Shop</h3>
       <div class="profile">
@@ -179,7 +180,6 @@
 
 <script src="script.js"></script>
 
-<!-- 🔥 INLINE ANIMATION SCRIPT -->
 <script>
   const elements = document.querySelectorAll(
     'body *:not(footer):not(footer *)'
@@ -188,7 +188,6 @@
   let delay = 0;
   elements.forEach(el => {
     if (['SCRIPT', 'STYLE'].includes(el.tagName)) return;
-
     el.classList.add('animate');
     el.style.animationDelay = `${delay}s`;
     delay += 0.05;
