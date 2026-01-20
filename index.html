@@ -13,6 +13,7 @@
 
   <!-- 🔥 INLINE ANIMATION STYLE -->
   <style>
+    
     .animate {
       opacity: 0;
       transform: translateX(-40px);
@@ -31,6 +32,27 @@
       transform: none !important;
       animation: none !important;
     }
+
+    .avatar-wrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+/* echtes Status-Bild */
+.status-img {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  bottom: -2px;
+  right: -2px;
+}
   </style>
 </head>
 
@@ -98,22 +120,29 @@
   <section class="profiles">
 
     <!-- Discord -->
-    <div class="profile-card">
-      <h3>Discord</h3>
-      <div class="profile">
-        <img class="avatar" src="https://cdn.discordapp.com/avatars/1456060220307542243/2f941a8cbc9491264af3d883d6fba818.webp">
-        <div>
-          <div class="name-row">
-            <strong>@duskzxd.</strong>
-            <div class="badges">
-              <img src="https://cdn3.emoji.gg/emojis/5630-discord-nitro.png">
-              <img src="https://cdn3.emoji.gg/emojis/815305-booster.png">
-            </div>
-          </div>
-          <span class="status online">Idle</span>
+<div class="profile-card">
+  <h3>Discord</h3>
+  <div class="profile">
+
+    <div class="avatar-wrapper">
+      <img class="avatar" src="https://cdn.discordapp.com/avatars/1456060220307542243/2f941a8cbc9491264af3d883d6fba818.webp">
+      <!-- neues Idle-Bild -->
+      <img class="status-img" src="https://assets.guns.lol/idle.png" alt="Idle">
+    </div>
+
+    <div>
+      <div class="name-row">
+        <strong>@duskzxd.</strong>
+        <div class="badges">
+          <img src="https://cdn3.emoji.gg/emojis/5630-discord-nitro.png">
+          <img src="https://cdn3.emoji.gg/emojis/815305-booster.png">
         </div>
       </div>
     </div>
+
+  </div>
+</div>
+
 
     <!-- Roblox -->
     <div class="profile-card">
